@@ -10,7 +10,7 @@ function toggleEnabled() {
 }
 
 function updateIcon() {
-  const icon = isEnabled ? "icon-on.png" : "icon-off.png";
+  const icon = isEnabled ? "icons/icon16.png" : "icons/icon32.png";
   chrome.action.setIcon({ path: { 16: icon, 32: icon, 48: icon } });
   chrome.action.setTitle({
     title: isEnabled ? "Facebook PiP Blocker: Enabled" : "Disabled",

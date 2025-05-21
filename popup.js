@@ -31,7 +31,7 @@ document.getElementById("sendFeedback").addEventListener("click", async () => {
   const feedback = document.getElementById("feedbackText").value.trim();
   if (!feedback) return alert("Please write your feedback before sending.");
 
-  const res = await fetch("https://formspree.io/f/mqkrlyww", {
+  const res = await fetch("https://formspree.io/f/xrbqvzkn", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
