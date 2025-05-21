@@ -2,11 +2,25 @@
 <html>
 
 <head>
-    <title>Auto Mute</title>
+    <title>Facebook PiP Blocker Settings</title>
 </head>
 
 <body>
-    <h4>Facebook</h4>
+    <h2>Extension Settings</h2>
+    <label>
+        <input type="checkbox" id="pipToggle">
+        Enable PiP Auto-Close
+    </label>
+    <label>
+        <input type="checkbox" id="tabToggle">
+        Pause Video on Tab Switch
+    </label>
+    <hr>
+    <h3>Feedback Form</h3>
+    <textarea id="feedbackText" placeholder="Write your feedback here..." rows="4"></textarea>
+    <button id="sendFeedback">Send Feedback</button>
+
+    <script src="popup.js"></script>
 </body>
 
 </html>

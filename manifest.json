@@ -16,6 +16,7 @@
   ],
   "action": {
     "default_title": "Facebook PiP Blocker: Disabled",
+    "default_popup": "popup.html",
     "default_icon": {
       "16": "icon-off.png",
       "32": "icon-off.png",

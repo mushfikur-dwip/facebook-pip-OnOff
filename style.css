@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+}
+label {
+    display: block;
+    margin: 10px 0;
+}
+button {
+    margin-top: 10px;
+}
+input,
+textarea {
+    width: 100%;
+} body {
+            font-family: Arial, sans-serif;
+            padding: 10px;
+        }
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+        button {
+            margin-top: 10px;
+        }
+        input,
+        textarea {
+            width: 100%;
+        }
