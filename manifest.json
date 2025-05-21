@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Facebook PiP Blocker",
+  "version": "1.0",
+  "description": "Automatically closes Facebook's PiP mini-player.",
+  "permissions": ["storage", "scripting", "activeTab"],
+  "host_permissions": ["https://www.facebook.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.facebook.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_title": "Facebook PiP Blocker: Disabled",
+    "default_icon": {
+      "16": "icon-off.png",
+      "32": "icon-off.png",
+      "48": "icon-off.png"
+    }
+  },
+  "icons": {
+    "16": "icon-off.png",
+    "32": "icon-off.png",
+    "48": "icon-off.png",
+    "128": "icon-off.png"
+  }
+}
