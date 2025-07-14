@@ -1,10 +1,10 @@
 {
   "manifest_version": 3,
   "name": "Facebook PiP Blocker",
-  "version": "1.0",
-  "description": "Automatically closes Facebook's PiP mini-player.",
+  "version": "1.0.1",
+  "description": "Automatically closes Facebook's PiP mini-player with customizable settings and modern UI.",
   "permissions": ["storage", "scripting", "activeTab"],
-  "host_permissions": ["https://www.facebook.com/*"],
+  "host_permissions": ["*://www.facebook.com/*"],
   "background": {
     "service_worker": "background.js"
   },
@@ -15,12 +15,13 @@
     }
   ],
   "action": {
-    "default_title": "Facebook PiP Blocker: Disabled",
+    "default_title": "Facebook PiP Blocker",
     "default_popup": "popup.html",
     "default_icon": {
       "16": "icons/icon16.png",
       "32": "icons/icon32.png",
-      "48": "icons/icon48.png"
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
     }
   },
   "icons": {
@@ -28,5 +29,7 @@
     "32": "icons/icon32.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
-  }
+  },
+  "author": "Mushfikur Rahman",
+  "homepage_url": "https://github.com/mushfikur-dwip/facebook-pip-OnOff"
 }

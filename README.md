@@ -8,12 +8,17 @@ A Chrome extension that automatically closes Facebook's Picture-in-Picture (PiP)
 - **Auto-Close PiP**: Automatically closes Facebook's floating Picture-in-Picture video player
 - **Tab Switch Video Control**: Automatically pauses video when you switch tabs and resumes when you return
 - **Toggle Controls**: Easy on/off switches for both features
+- **Modern UI**: Clean, intuitive interface with light/dark theme toggle
+- **Whitelist Support**: Exclude specific Facebook pages from PiP blocking
+- **Customizable Detection Speed**: Adjust how quickly PiP videos are detected and closed
 - **Feedback System**: Built-in feedback form to send suggestions directly to the developer
 
 ### 🎯 Why Use This Extension?
 - Prevents annoying floating video players from following you while scrolling
 - Saves battery life by pausing videos when not actively viewing
 - Provides a cleaner, distraction-free Facebook browsing experience
+- Customizable options to match your browsing preferences
+- Whitelist support for pages where you want to keep PiP enabled
 - Lightweight and fast with minimal resource usage
 
 ## 📋 Requirements
@@ -71,32 +76,49 @@ Since this extension is not yet published on the Chrome Web Store, you'll need t
 ### Basic Usage
 1. **Navigate to Facebook**: Go to [facebook.com](https://facebook.com)
 2. **Access Extension**: Click the Facebook PiP Blocker icon in your Chrome toolbar
-3. **Configure Settings**: Toggle features on/off as needed
+3. **Configure Settings**: Navigate between Main, Settings, and Feedback tabs to customize your experience
 
 ### Feature Controls
 
 #### 🔄 Auto-Close PiP
 - **What it does**: Automatically closes Facebook's floating video player
-- **How to toggle**: Check/uncheck "Enable PiP Auto-Close" in the extension popup
+- **How to toggle**: Switch "PiP Auto-Close" toggle in the Main tab
 - **Effect**: Page will reload to apply changes
 
 #### ⏸️ Tab Switch Video Control
 - **What it does**: Pauses videos when you switch to another tab, resumes when you return
-- **How to toggle**: Check/uncheck "Pause Video on Tab Switch" in the extension popup
+- **How to toggle**: Switch "Pause Video on Tab Switch" toggle in the Main tab
 - **Effect**: Page will reload to apply changes
+
+#### 🕒 Detection Speed (New)
+- **What it does**: Controls how quickly the extension detects and closes PiP videos
+- **How to adjust**: Use the slider in the Settings tab
+- **Range**: 200ms (fastest) to 3000ms (slowest)
+
+#### 📋 Whitelist Mode (New)
+- **What it does**: Allows PiP videos on specific Facebook pages you choose
+- **How to use**:
+  1. Enable "Whitelist Mode" in Settings tab
+  2. Add Facebook URLs to the whitelist
+  3. PiP blocking will be disabled on whitelisted pages
+
+#### 🌓 Theme Toggle (New)
+- **What it does**: Switches between light and dark themes
+- **How to use**: Click the moon/sun icon in the top-right corner of the popup
 
 #### 💬 Feedback System
 - **Purpose**: Send suggestions, bug reports, or feedback directly to the developer
 - **How to use**:
   1. Click the extension icon
-  2. Scroll to the "Feedback Form" section
+  2. Navigate to the "Feedback" tab
   3. Type your message in the text area
   4. Click "Send Feedback"
 
 ### Extension States
-The extension icon title changes based on its status:
-- **"Facebook PiP Blocker: Enabled"** - When PiP blocking is active
-- **"Facebook PiP Blocker: Disabled"** - When PiP blocking is inactive
+The extension icon and badge indicate its status:
+- **Green "ON" badge** - When PiP blocking is active
+- **No badge** - When PiP blocking is inactive
+- **Status indicator** - Visual indicator in the Main tab showing current protection status
 
 ## ⚙️ Technical Details
 
@@ -110,7 +132,9 @@ The extension icon title changes based on its status:
 1. **Content Script**: Monitors Facebook pages for PiP video elements
 2. **Background Service**: Manages extension state and settings
 3. **Popup Interface**: Provides user controls and feedback system
-4. **Auto-Detection**: Scans for specific Facebook video control elements every second
+4. **Auto-Detection**: Scans for specific Facebook video control elements at configurable intervals
+5. **Whitelist System**: Checks current URL against user-defined whitelist before applying PiP blocking
+6. **Theme Management**: Stores and applies user theme preference across sessions
 
 ## 🔧 Troubleshooting
 
@@ -121,9 +145,10 @@ The extension icon title changes based on its status:
 4. **Developer mode**: Verify Developer mode is still enabled in Chrome extensions
 
 ### Common Issues
-- **PiP still appearing**: Wait a few seconds, the extension checks every 1 second
+- **PiP still appearing**: Wait a few seconds, or try increasing the detection speed in Settings
 - **Videos not pausing**: Ensure "Pause Video on Tab Switch" is enabled and page is reloaded
 - **Settings not saving**: Check if Chrome has storage permissions for the extension
+- **PiP blocking on a page where you want it**: Add the page URL to your whitelist in Settings
 
 ### Debug Mode
 1. Right-click the extension icon → "Inspect popup" to view popup console
@@ -166,11 +191,20 @@ This extension:
 
 ## 📝 Version History
 
-### Version 1.0 (Current)
+### Version 1.0.1 (Current)
+- Modern UI with tabbed interface
+- Light/dark theme toggle
+- Whitelist functionality for specific pages
+- Customizable detection speed
+- Improved status indicators
+- Enhanced background service reliability
+- Better badge and icon visibility
+
+### Version 1.0
 - Initial release
 - Auto-close PiP functionality
 - Tab switch video control
-- Settings popup interface
+- Basic settings popup interface
 - Feedback system integration
 
 ## 🤝 Contributing
